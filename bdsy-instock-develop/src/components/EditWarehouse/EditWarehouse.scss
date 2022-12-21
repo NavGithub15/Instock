@@ -1,0 +1,40 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.edit-warehouse {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+  
+  @include tablet {
+    padding: 0 2rem;
+  }
+
+  &__container {
+    background-color: $color-global-white;
+    border-radius: .25rem;
+    box-shadow: 0 .125rem .3125rem rgba(19, 24, 44, 0.1);
+    width: 100%;
+    max-width: 1020px;
+  }
+
+  &__arrow {
+    cursor: pointer;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    height: 5.875rem;
+    padding: 1.5rem;
+
+    @include tablet {
+      border-bottom: .0625rem solid $color-outlines-dividers-borders;
+    }
+  }
+
+  &__title {
+    margin-left: .5rem;
+  }
+}

@@ -1,0 +1,153 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+
+.inventory {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+  
+  @include tablet {
+    padding: 0 2rem;
+  }
+
+  &__container {
+    background-color: $color-global-white;
+    border-radius: .25rem;
+    box-shadow: 0 .125rem .3125rem rgba(19, 24, 44, 0.1);
+    width: 100%;
+    max-width: 1020px;
+  }
+
+  &__heading-box {
+    padding: 2rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom: .0625rem solid $color-outlines-dividers-borders;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-end;
+      border-bottom: none;
+      padding: 2rem 2rem 1.375rem;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
+
+    @include tablet {
+      margin-right: auto;
+      margin-bottom: unset;
+    }
+  }
+
+  &__search-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: flex-end;
+    }
+  }
+
+  &__search {
+    background-image: url(../../assets//icons/search-24px.svg);
+    background-repeat: no-repeat;
+    background-position: 95%;
+    height: 2.25rem;
+    border-radius: 1.25rem;
+    border: .0625rem solid $color-outlines-dividers-borders;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    
+    @include tablet {
+      height: 2.375rem;
+      width: 25vw;
+      margin-bottom: 0;
+    }
+
+    @include desktop{
+      width: 17.125rem;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-interactive-elements;
+    color: $color-global-white;
+    font-weight: 600;
+    height: 2.25rem;
+    border: 0 solid $color-page-bg-column-header-bg-cta-bg;
+    border-radius: 1.25rem;
+
+    @include tablet {
+      height: 2.375rem;
+      width: 10.6rem;
+      margin-left: 1rem;
+    }
+
+    @include desktop{
+      width: 10.6rem;
+    }
+    
+    &:hover {
+      background-color: $color-header-bg-cta-hover;
+    }
+  }
+
+  .inventory-tablet {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 2.5rem;
+      padding: 0 2rem;
+      background-color: #F7F8F9;
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: gray;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        flex-basis: calc(100%/6)
+      }
+    
+    &__icon {
+        margin-left: .3rem;
+        width: 1rem;
+    }
+
+    &__inventory {
+      flex-basis: 21%;
+    }
+
+    &__category {
+      @include tablet {
+        margin-left: 1.25rem;
+      }
+    }
+
+    &__status, 
+    &__quantity{
+      @include tablet {
+        margin-left: 2.5rem;
+      }
+    }
+
+    &__actions {
+      margin-left: auto;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.header {
+    background-color: $color-header-bg-cta-hover;
+    justify-content: space-between;
+    padding: 0 1rem 1.5rem 1rem;
+
+    @include tablet {
+        padding: 1.6875rem 2rem;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include tablet {
+            flex-direction: row;
+            max-width: 63.75rem;
+            margin: 0 auto;
+        }
+    }
+
+    &__logo {
+        padding: 1.5rem 0;
+
+        @include tablet {
+            padding: 0;
+        }
+
+        &-link {
+            height: 4.75rem;
+
+            @include tablet {
+                height: unset;
+            }
+        }
+    }
+
+    &__links {
+        width: 100%;
+        color: $color-page-bg-column-header-bg-cta-bg;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+
+        @include tablet {
+            justify-content: flex-end;
+        }
+    }
+
+    &__link {
+        height: 2.375rem;
+        width: 100%;
+        padding: 0 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 1.25rem;
+
+        @include tablet {
+            width: 9rem;
+        }
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+    }
+
+    &__link--active {
+        background-color: $color-global-text;
+    }
+
+    &__bottom {
+        height: 4.1rem;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 8.5rem;
+        background-color: $color-header-bg-cta-hover;
+        z-index: -1;
+
+        @include tablet {
+            height: 5.975rem;
+            top: 5.65rem;
+        }
+    }
+}

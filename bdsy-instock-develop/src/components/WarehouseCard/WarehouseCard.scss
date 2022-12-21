@@ -1,0 +1,244 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+
+.warehouse-card {
+  background-color: $color-page-bg-column-header-bg-cta-bg;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1.5rem 1rem 0.2rem 1rem;
+  font-size: 0.8125rem;
+  text-decoration: none;
+  color: $color-global-text;
+  border-bottom: 0.0625rem solid $color-outlines-dividers-borders;
+  &:last-child{
+    border-bottom: none;
+  }
+  &:hover{
+    background: rgba(46, 102, 230, 0.07)
+
+  }
+
+  @include tablet {
+    background-color: $color-global-white;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem 1.2rem;
+  }
+
+  &__mobile-label {
+    color: $color-column-headers;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__city-wrapper {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+
+    @include tablet {
+      order: 1;
+      margin-top: -0.4rem;
+    }
+  }
+
+  &__city {
+    color: $color-interactive-elements;
+    &:hover{
+      text-decoration: underline;
+    }
+    &:hover ~ .warehouse-card__chevron-icon{
+      transform: translateX(.25rem) ;
+    }
+  }
+
+  &__chevron-icon{
+    width: 1.2rem;
+    transition: transform .2s ease;
+  }
+
+  &__address-wrapper {
+    order: 3;
+    flex-basis: 54%;
+
+    @include tablet {
+      order: 2;
+    }
+  }
+
+  &__mobile-icon {
+    margin: 0.8rem 0;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__mobile-icon--special {
+    align-self: flex-end;
+    margin-top: 0.8rem;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+
+  &__contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.71rem;
+    order: 2;
+
+    @include tablet {
+      order: 3;
+    }
+
+    @include desktop{
+      margin-bottom: 0;
+      margin-left: 1.2rem;
+    }
+  }
+
+  &__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    order: 4;
+    width: 46%;
+
+    @include tablet {
+    width: 100%;
+    margin-right: 1.875rem;
+    margin-top: -0.5rem;
+
+
+    @include desktop{
+      margin-right: 1rem;
+      margin-top: -0.5rem;
+      }
+    }
+  }
+
+  &__icons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 1rem 0;
+    order: 5;
+
+    @include tablet {
+      justify-content: flex-end;
+      gap: 1rem;
+      margin:0;
+      padding-bottom: .5rem;
+    }
+  }
+
+  &__icon{
+    cursor: pointer;
+    @include tablet{
+      width: 1.5rem;
+      
+    }
+  }
+
+  &__wrapper {
+    @include tablet {
+      flex-basis: 20%;
+ 
+    }
+  }
+  
+  &__location-wrapper {
+    order: 1;
+    flex-basis: 54%;
+    
+    @include tablet {
+     flex-basis: 20%;
+     margin-right: .375rem;
+    }
+
+    @include desktop{
+      margin-right: 2rem;
+      margin-top: -0.2rem;
+    }
+  }
+
+  &__address {
+    width: 65%;
+    
+    @include tablet {
+      width: 80%;
+      margin-top: -0.5rem;
+      margin-left: .5rem
+    }
+    @include desktop {
+      margin: 0;
+    }
+  }
+  &__name {
+    @include tablet {
+      margin-left: .375rem;
+    }
+
+    @include desktop {
+      margin: 0;
+    }
+ 
+  }
+
+  
+  &__contact-info{
+    @include tablet {
+      margin-left: .25rem;
+    }
+    @include desktop{
+      margin-left: 1.1rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

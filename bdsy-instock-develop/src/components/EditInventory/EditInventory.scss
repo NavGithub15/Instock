@@ -1,0 +1,36 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/breakpoints" as *;
+
+.edit-inventory {
+    margin: 0 1rem 4rem 1rem;
+    background-color: #ffffff;
+    border-radius: .25rem;
+    box-shadow: 0 .125rem .3125rem rgba(19, 24, 44, 0.1);
+
+    @include tablet {
+        margin: 0 2rem;
+    }
+
+    @include desktop {
+        max-width: 63.75rem;
+        margin: 0 auto;
+    }
+
+    &__titles {
+        display: flex;
+        align-items: center;
+        // padding: 1.5rem 1rem;
+        padding: 2rem 1.5rem 1.5rem;
+        border-bottom: .125rem solid $color-outlines-dividers-borders;
+
+        @include tablet {
+            align-items: center;
+            // padding: 1.5rem 2rem;
+            padding: 2rem 2rem 1.375rem;
+        }
+    }
+
+    &__title {
+        padding-left: 0.5rem;
+    }
+}

@@ -1,0 +1,128 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.inventory-item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+  
+  @include tablet {
+    padding: 0 2rem;
+  }
+  
+  &__container {
+    background-color: $color-global-white;
+    border-radius: .25rem;
+    box-shadow: 0 .125rem .3125rem rgba(19, 24, 44, 0.1);
+    width: 100%;
+    max-width: 63.75rem;
+  }
+
+  &__arrow {
+    cursor: pointer;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.875rem;
+    border-bottom: .0625rem solid $color-outlines-dividers-borders;
+    padding: 1.5rem;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-left: .5rem;
+  }
+
+  &__failed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: .0625rem solid;
+    background-color: $color-global-white;
+    height: 6.25rem;
+    width: 100%;
+    max-width: 63.75rem;
+    border-radius: .25rem;
+    box-shadow: 0 .125rem .3125rem;
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: $color-interactive-elements;
+  margin-top:  .5rem;
+
+  @include tablet {
+    height: 2.375rem;
+    width: fit-content;
+    padding: 0 1rem;
+    border-radius: 1.25rem;
+    gap: .25rem;
+  }
+
+  &:hover {
+    background-color: $color-header-bg-cta-hover;
+  }
+
+  &__icon {
+    height: 1.25rem;
+  }
+  
+  &__title {
+    display:none;
+
+    @include tablet {
+      display: block;
+      color: white;
+    }
+  }
+}
+
+.description {
+  padding: 1rem 1.5rem 1.5rem;
+  
+  @include tablet {
+    padding: 1.5rem 2rem;
+    display: flex;
+  }
+
+  &__item {
+
+    @include tablet {
+      flex-basis: 50%;
+      border-right: .0625rem solid $color-outlines-dividers-borders;
+      padding-right: 1.5rem;
+      padding-bottom: .5rem;
+    }
+  }
+  
+  &__info {
+
+    @include tablet {
+      flex-basis: 50%;
+      padding-left: 2.5rem;
+      padding-bottom: .5rem;
+    }
+  }
+
+  &__stock {
+    display: flex;
+  }
+
+  &__status {
+    width: 100%;
+  }
+
+  &__quantity {
+    width: 100%;
+  }
+}

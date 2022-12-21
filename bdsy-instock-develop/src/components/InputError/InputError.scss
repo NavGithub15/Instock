@@ -1,0 +1,20 @@
+@use '../../styles/partials/colors' as *;
+@use '../../styles/partials/breakpoints' as *;
+
+.input-error {
+  display: flex;
+  align-items: center;
+  margin-top: .25rem;
+
+  &__icon {
+    height: .875rem;
+
+    @include tablet {
+      height: 1rem;
+    }
+  }
+
+  &__message {
+    color: $color-label-out-of-stock-error-delete-icon;
+  }
+}

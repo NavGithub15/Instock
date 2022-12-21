@@ -1,0 +1,169 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+
+.warehouses {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+  
+  @include tablet {
+    padding: 0 2rem;
+  }
+
+  &__heading-box {
+    padding: 2rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom: .0625rem solid $color-outlines-dividers-borders;
+
+    @include tablet {
+      padding: 2rem 2rem 1.375rem;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: none;
+    }
+  }
+
+  &__container {
+    background-color: $color-global-white;
+    border-radius: .25rem;
+    box-shadow: 0rem .125rem .3125rem rgba(19, 24, 44, 0.1);
+    width: 100%;
+    max-width: 1020px;
+
+    @include tablet {
+      background-color: $color-global-white;
+      margin: 1.5rem 2rem;
+      max-width: 63.75rem;
+      margin:  0 auto;
+    }
+  }
+
+  &__search-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.5rem;
+
+    @include tablet {
+      flex-direction: row;
+      align-items: flex-end;
+      margin-top: unset;
+    }
+  }
+
+  &__search {
+    background-image: url(../../assets//icons/search-24px.svg);
+    background-repeat: no-repeat;
+    background-position: 95%;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    height: 2.25rem;
+    border-radius: 1.25rem;
+    border: .0625rem solid $color-outlines-dividers-borders;
+    padding-left: 1rem;
+    &::placeholder{
+      color: $color-placeholder-text;
+    }
+    &:hover{
+      border-color: $color-interactive-elements;
+    }
+
+    @include tablet {
+      height: 2.375rem;
+      width: 12rem;
+      margin-bottom: 0;
+    }
+
+    @include desktop{
+      width: 17rem;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-interactive-elements;
+    color: $color-global-white;
+    font-weight: 600;
+    height: 2.25rem;
+    border: 0 solid $color-page-bg-column-header-bg-cta-bg;
+    border-radius: 1.25rem;
+    &:hover{
+      background-color: $color-header-bg-cta-hover;
+    }
+
+    @include tablet {
+      height: 2.375rem;
+      width: 12rem;
+      margin-left: 1rem;
+    }
+
+    @include desktop{
+      width: 12rem;
+    }
+    
+    &:hover {
+      background-color: $color-header-bg-cta-hover;
+    }
+  }
+}
+  .tablet {
+    display: none;
+
+    @include tablet {
+      background-color: $color-page-bg-column-header-bg-cta-bg;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 2.5rem;
+      padding: 0 2rem;
+      font-weight: 600;
+      color: $color-column-headers;
+      text-transform: uppercase;
+    }
+
+    &__label {
+      display: flex;
+      flex-basis: calc(100%/5);
+      align-items: center;
+      margin-bottom: .3rem;
+      width: 9.375rem;
+
+      @include desktop{
+        flex-basis: 15%;
+      }
+    }
+
+    &__icon {
+      margin-left: .3rem;
+      margin-top: .5rem;
+      width: 1rem;
+
+    }
+
+    &__warehouse{
+      flex-basis: 20%;
+    }
+    &__address {
+      @include tablet {
+        margin-left: .5rem;
+      }
+    }
+    
+
+    &__info {
+      @include tablet {
+        width: 8rem;
+
+      }
+    }
+    &__actions {
+      @include tablet {
+        margin-left: auto;
+      }
+    }
+  }

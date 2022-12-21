@@ -1,0 +1,109 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+
+.modal {
+  background-color: rgba($color-global-text, 0.7);
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  right: 0rem;
+  top: 0rem;
+  
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem;
+      max-width: 50rem;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-global-white;
+      box-shadow: 0rem 0rem 1.125rem 0rem rgba(0, 0, 0, 0.10);
+  
+      @include tablet {
+        justify-content: space-between;
+        top: 33%;
+        border-radius: 0.25rem;
+        width: 42rem;
+        height: 16.375rem;
+      }
+    }
+
+    &__close{
+      position: absolute;
+      top: 2%;
+      right: 3%;
+
+      @include tablet{
+        top: 5%;
+        right: 2%;
+      }
+    }
+
+    &__wrapper{
+      position: relative;
+      color: $color-global-text;
+      margin: 3rem 0; 
+
+      @include tablet{
+        margin: 0;
+        padding: 1.5rem 0;
+        width: 85%;
+      }
+    }
+
+    .h1{
+      margin-bottom: 1rem;
+    }
+
+    &__cta-wrapper{
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: 1rem 0;
+  
+      @include tablet{
+        margin: 0;
+        padding: 1rem 2rem 1.5rem;
+        justify-content: flex-end;
+  
+      }
+    }
+
+    &__cta{
+      background-color: $color-label-out-of-stock-error-delete-icon;
+      color: $color-global-white;
+      font-weight: 600;
+      border: none;
+      border-radius: 1.25rem;
+      width: 50%;
+      height: 2.25rem;
+      cursor: pointer;
+      &:hover{
+        background-color: $color-header-bg-cta-hover;
+      }
+      
+      @include tablet{
+        width: 12%;
+      }
+    }
+  
+    &__cta--special{
+      background-color: $color-global-white;
+      color: $color-global-text;
+      border: .0625rem solid $color-outlines-dividers-borders;
+      margin-right: 1rem;
+  
+      &:hover{
+        background-color: $color-global-white;
+        border: .0625rem solid $color-interactive-elements;
+      }
+    }
+    
+}

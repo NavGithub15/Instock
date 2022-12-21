@@ -1,0 +1,190 @@
+@use "../../styles/partials/breakpoints" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/typography" as *;
+
+.warehouse {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 1rem;
+  
+  @include tablet {
+    padding: 0 2rem;
+  }
+  
+  &__container {
+    background-color: $color-global-white;
+    border-radius: .25rem;
+    box-shadow: 0 .125rem .3125rem rgba(19, 24, 44, 0.1);
+    width: 100%;
+    max-width: 1020px;
+  }
+  
+  &__details-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: .0625rem solid $color-outlines-dividers-borders;
+    border-bottom: .0625rem solid $color-outlines-dividers-borders;
+    @include tablet {
+      display: block;
+      border-bottom: none;
+    }
+  }
+
+  &__details-wrapper {
+    padding: 1rem;
+
+    @include tablet {
+      display: flex; 
+      align-items: baseline;
+      gap: 2rem;
+      padding: 0rem 2rem 1rem;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-left: .5rem;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: $color-interactive-elements;
+
+    @include tablet {
+      height: 2.375rem;
+      width: fit-content;
+      padding: 0 1rem;
+      border-radius: 1.25rem;
+      gap: .25rem;
+    }
+  }
+
+  &__header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1.5rem 1.5rem;
+    
+    @include tablet {
+      justify-content: space-between;
+      padding: 2rem 2rem 1.375rem;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+
+    @include desktop {
+      gap: 8rem;
+    }
+  }
+
+  &__address{ 
+    flex-basis: 33%;
+  }
+}
+
+.address {
+ &__container {
+  display: flex;
+  gap: .1875rem;
+
+  @include tablet {
+    flex-direction: column;
+  }
+ }
+}
+
+.contact {
+  &__name-container {
+    @include tablet {
+      border-left: .0625rem solid $color-outlines-dividers-borders;
+      padding-left: 2rem;
+    }
+  }
+
+  &__position {
+    width: 105%;
+  }
+}
+
+.warehouse-tablet {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 2.5rem;
+    padding: 0 2rem;
+    background-color: #F7F8F9;
+    font-size: .75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $color-column-headers;
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    flex-basis: calc(100%/5)
+    }
+
+  &__icon {
+    margin-left: .3rem;
+    width: 1rem;
+  }
+
+  &__inventory {
+    flex-basis: 21%;
+  }
+
+  &__category {
+    @include tablet {
+      margin-left: .5rem;
+    }
+  }
+ 
+  &__quantity {
+    @include tablet {
+      margin-left: 2.5rem;
+    }
+    @include desktop {
+      margin-left: 5rem;
+    }
+  }
+
+  &__actions {
+    margin-left: auto;
+  }
+}
+
+.button {
+  &__title {
+    display:none;
+
+    @include tablet {
+      display: block;
+      color: white;
+    }
+  }
+}
+
+h4 {
+  text-transform: uppercase;
+  color: $color-column-headers;
+  margin-bottom: .5rem;
+}

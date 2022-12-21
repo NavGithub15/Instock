@@ -1,0 +1,35 @@
+@use "./styles/partials/breakpoints" as *;
+@use "./styles/partials/colors" as *;
+@use "./styles/partials/typography" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "TitilliumWeb";
+  margin: 0;
+  padding: 0;
+  color: $color-global-text;
+  background-color: $color-page-bg-column-header-bg-cta-bg;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
